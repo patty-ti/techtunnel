@@ -1,14 +1,14 @@
 import { Wrapper } from './Cart.styles';
-
 import CartItems from '../CartItems/CartItems';
 
-import { CartItemType } from '../../App';
+import { CartItemType } from '../../Pages/Home/Home';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 type Props = {
     cartItems: CartItemType[];
     addToCart: (clickedItem: CartItemType) => void;
-    removeFromCart: (id: number) => void;
+    removeFromCart: (id: number) => void; 
 };
 
 const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
@@ -28,7 +28,9 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
                 />
             ))}
             <h2>Total: R$ {calculateTotal(cartItems).toFixed(2)}</h2>            
-            <Button disabled={cartItems.length === 0}>Finalizar Pedido</Button>
+            <Button disabled={cartItems.length === 0}>
+            <Link to="/finalizarpedido"> Finalizar Pedido </Link>
+            </Button>
         </Wrapper>
     );
 };

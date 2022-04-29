@@ -3,11 +3,6 @@ import { useState } from 'react';
 import Modal from '../../Components/Modal/Modal';
 import Login from '../../Pages/Login/Login';
 
-import { Link } from 'react-router-dom';
-
-
-
-
 const Header = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -31,14 +26,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                </S.Menu>
-                
-                <>                    
-                    {/* <Link to="/login">Login</Link>
-                    <Router exact path="/login"><Login /></Router> */}
-                </>
-            
-            
+                </S.Menu>           
         </S.Header>        
     );
 }
