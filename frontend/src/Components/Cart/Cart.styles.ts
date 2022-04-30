@@ -9,5 +9,6 @@ export const Wrapper = styled.aside`
         border-radius: 20px 20px;
         background-color: #bdb6c2;
         margin-bottom: 20px;
+        text-decoration: none;
     }
 `;

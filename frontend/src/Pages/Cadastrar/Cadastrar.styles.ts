@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`    
+export const Container = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-color: #02044A;
+`;
+
+export const FormCadastrar = styled.div`    
     margin: 0 auto;
     width: 70%;
     height: 100%;
@@ -38,15 +44,3 @@ export const LoginForm = styled.form`
     }
     
 `;
-
-export const CriarConta = styled.div`
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-
-    .cadastrar {
-        color: blue;
-    }
-`;
-

@@ -29,7 +29,7 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
             ))}
             <h2>Total: R$ {calculateTotal(cartItems).toFixed(2)}</h2>            
             <Button disabled={cartItems.length === 0}>
-            <Link to="/finalizarpedido"> Finalizar Pedido </Link>
+            <Link to="/finalizarpedidostep1"> Finalizar Pedido </Link>
             </Button>
         </Wrapper>
     );
