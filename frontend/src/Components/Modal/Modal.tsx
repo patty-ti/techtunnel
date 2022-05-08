@@ -11,7 +11,7 @@ const Modal: React.FC<any> = ({ id = 'modal', onClose = () => {}, children }) =>
         <S.Modal id={id} onClick={handleOutsideClick}>
             <S.Container>
                 <button className="close" onClick={onClose}>X</button>
-                <S.FormLogin>{children}</S.FormLogin>
+                <div>{children}</div>
             </S.Container>
         </S.Modal>
     );

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import Drawer from '@material-ui/core/Drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -11,6 +11,7 @@ import Item from '../../Components/Items/Items'
 import Cart from '../../Components/Cart/Cart';
 import Header from '../../Components/Header/Header';
 import Search from '../../Components/Search/Search';
+import { AuthContext } from '../../Contexts/AuthContext';
 
 export type CartItemType = {
     id: number;
@@ -30,6 +31,9 @@ const Home = () => {
 
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState(false);
+
+    const auth = useContext(AuthContext);
+
 
     useEffect(() => {
     getProducts();
@@ -94,7 +98,9 @@ if(error) return <div>Algo deu errado...</div>;
 
 return (    
     <Container>    
-    <Header />    
+    <Header 
+        {...auth.user && <a href="javascript:;">SAIR</a>}
+    />    
     <Search handleChangeSearch={handleChangeSearch} />
 
     <StyledButton onClick={() => setCartOpen(true)}>

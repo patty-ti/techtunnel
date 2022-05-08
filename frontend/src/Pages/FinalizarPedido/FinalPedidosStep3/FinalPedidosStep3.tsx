@@ -1,16 +1,21 @@
 import Header from '../../../Components/Header/Header';
 import * as S from './FinalPedidosStep3.styles';
-import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 const FinalPedidosStep3 = () => {    
     return(
         <S.Container> 
             <Header />            
-            <h1 className="title">Finalizar Pedido!</h1>  
-            <Button>
-            <Link to="/statuspedidos"> Finalizar </Link>
-            </Button>          
+            <S.Title>Forma de Pagamento:</S.Title>
+            
+            <S.Navigation> 
+                <S.Button>
+                    <Link to="/finalizarpedidostep2"> Voltar </Link>
+                </S.Button> 
+                <S.Button>
+                    <Link to="/statuspedidos"> Finalizar </Link>
+                </S.Button >
+            </S.Navigation>          
         </S.Container>
     );
 };

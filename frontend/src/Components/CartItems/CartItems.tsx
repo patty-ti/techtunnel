@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 import { CartItemType } from '../../Pages/Home/Home';
 
-type Props = {
+export type Props = {
     item: CartItemType;
     addToCart: (clickedItem: CartItemType) => void; 
     removeFromCart: (id: number) => void;

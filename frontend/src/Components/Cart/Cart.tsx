@@ -1,11 +1,10 @@
 import { Wrapper } from './Cart.styles';
 import CartItems from '../CartItems/CartItems';
-
 import { CartItemType } from '../../Pages/Home/Home';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
-type Props = {
+export type Props = {
     cartItems: CartItemType[];
     addToCart: (clickedItem: CartItemType) => void;
     removeFromCart: (id: number) => void; 

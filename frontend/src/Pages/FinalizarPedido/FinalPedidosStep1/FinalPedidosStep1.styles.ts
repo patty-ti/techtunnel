@@ -19,12 +19,32 @@ export const Container = styled.div`
         margin-top: 50px;
         margin-bottom: 50px;
     }
+`;
 
-    .button {
+export const Navigation = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #9ab2c8;
+`;
+
+export const Button = styled.button`            
+    border-radius: 5px 5px;
+    background-color: #9ab2c8;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+    text-decoration: none;      
+`;
+
+export const Wrapper = styled.aside`
+    font-family: Arial, Helvetica, sans-serif;    
+    width: 500px;
+    padding: 15px;    
+
+    button {
         border-radius: 20px 20px;
         background-color: #bdb6c2;
         margin-bottom: 20px;
         text-decoration: none;
     }
 `;
-

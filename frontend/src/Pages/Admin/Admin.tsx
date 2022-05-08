@@ -1,9 +1,19 @@
-import App from "../../App";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexts/AuthContext";
 
-const Admin = () => {
+
+const Adm = () => {    
+    const auth = useContext(AuthContext);
     return(
-        <App />
+        
+        <header>
+            <h2>Dashbord</h2>
+            Olá {auth.user?.email}
+            
+        </header>
+        
+        
     );
-};
+}
 
-export default Admin;
+export default Adm;

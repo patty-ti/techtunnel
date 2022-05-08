@@ -25,16 +25,21 @@ export const EcommerceName = styled.div`
 
 export const Menu = styled.div`
     nav ul {
-        display: flex;        
+        display: flex;  
+        align-items: center;      
         height: 40px;
         list-style: none;
     }
 
     li {
         margin-left: 10px;
-        margin-right: 140px;
+        margin-right: 14px;
         display: flex;
-        align-items: center;
+        align-items: left;
+    }
+
+    .hello {
+        color: #fff;
     }
 
     a {
@@ -48,3 +53,4 @@ export const Menu = styled.div`
         opacity: 0.5;
     }
 `;
+

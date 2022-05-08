@@ -6,17 +6,22 @@ import FinalPedidosStep1 from './Pages/FinalizarPedido/FinalPedidosStep1/FinalPe
 import FinalPedidosStep2 from './Pages/FinalizarPedido/FinalPedidosStep2/FinalPedidosStep2';
 import FinalPedidosStep3 from './Pages/FinalizarPedido/FinalPedidosStep3/FinalPedidosStep3';
 import StatusPedidos from './Pages/StatusPedidos/StatusPedidos';
+import Admin from './Pages/Admin/Admin';
+import { RequireAuth } from './Contexts/RequireAuth';
+import DetalhesProd from './Pages/Detalhes/DetalhesProd';
 
 function App () {
-  return(
+  return(    
     <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="cadastrar"element={<Cadastrar />}/>
-        <Route path="finalizarpedidostep1"element={<FinalPedidosStep1 />}/>
+        <Route path="detalhes" element={<DetalhesProd />}/>
+        <Route path="finalizarpedidostep1" element={<FinalPedidosStep1 />} />        
         <Route path="finalizarpedidostep2"element={<FinalPedidosStep2 />}/>
         <Route path="finalizarpedidostep3"element={<FinalPedidosStep3 />}/> 
-        <Route path="statuspedidos"element={<StatusPedidos />}/>       
-    </Routes>     
+        <Route path="statuspedidos"element={<StatusPedidos />}/> 
+        <Route path="private" element={<RequireAuth><Admin /></RequireAuth>} />
+    </Routes>         
   );
 }
 

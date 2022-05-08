@@ -1,8 +1,6 @@
 import Header from '../../Components/Header/Header';
 import * as S from './StatusPedidos.styles';
 
-import { Link } from 'react-router-dom';
-
 const StatusPedidos = () => {    
     return(
         <S.Container> 
